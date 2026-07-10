@@ -1,10 +1,10 @@
 /* ============================================
-   CONTACT PAGE - ULTRA MINIMAL STYLES
+   CONTACT PAGE - PREMIUM REFINEMENT
    Indian Shape Designer - Luxury Theme
    ============================================ */
 
 /* ═══════════════════════════════════════════
-   SECTION 1: HERO (Minimal)
+   SECTION 1: HERO
    ═══════════════════════════════════════════ */
 .isd-contact-hero-minimal {
     padding-top: 200px;
@@ -82,7 +82,7 @@
 }
 
 /* ═══════════════════════════════════════════
-   SECTION 2: CONSULTATION FORM + LOCATIONS
+   SECTION 2: CONSULTATION FORM
    ═══════════════════════════════════════════ */
 .isd-consultation-minimal {
     background: #FFFFFF;
@@ -90,15 +90,8 @@
     padding-bottom: 140px;
 }
 
-.isd-consultation-minimal__grid {
-    display: grid;
-    grid-template-columns: 55fr 45fr;
-    gap: 80px;
-    align-items: start;
-}
-
 .isd-consultation-minimal__header {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
 .isd-consultation-minimal__heading {
@@ -115,23 +108,25 @@
     font-weight: 300;
 }
 
-/* Minimal Form Elements */
+/* Elegant Form Typography & Spacing */
+.isd-consult-form-minimal {
+    max-width: 800px;
+}
+
 .isd-form-row-minimal {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 48px;
+    margin-bottom: 48px;
 }
 
 .isd-input-group-minimal {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .isd-form-row-minimal .isd-input-group-minimal {
     margin-bottom: 0;
-}
-.isd-consult-form-minimal > .isd-form-row-minimal {
-    margin-bottom: 32px;
 }
 
 .isd-input-minimal,
@@ -140,28 +135,30 @@
     width: 100%;
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.15);
     border-radius: 0;
-    padding: 16px 0;
+    padding: 20px 0;
     font-family: var(--font-body);
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     color: var(--color-primary);
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
     appearance: none;
     -webkit-appearance: none;
 }
 
 .isd-input-minimal::placeholder,
 .isd-textarea-minimal::placeholder {
-    color: var(--color-text-light);
+    color: rgba(17, 17, 17, 0.35);
     font-weight: 300;
 }
 
+/* Focus States with subtle gold accent */
 .isd-input-minimal:focus,
 .isd-select-minimal:focus,
 .isd-textarea-minimal:focus {
-    border-bottom-color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+    box-shadow: 0 1px 0 0 var(--color-accent);
 }
 
 .isd-input-error {
@@ -170,7 +167,7 @@
 
 .isd-textarea-minimal {
     resize: none;
-    min-height: 48px;
+    min-height: 60px;
 }
 
 .isd-select-wrapper-minimal {
@@ -199,7 +196,7 @@
 }
 
 .isd-form-submit-wrapper-minimal {
-    margin-top: 48px;
+    margin-top: 56px;
 }
 
 .isd-btn-submit-minimal {
@@ -233,183 +230,168 @@
     transition: transform 0.3s ease;
 }
 
-.isd-consult-submit-minimal__loader {
-    display: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgba(17, 17, 17, 0.1);
-    border-top-color: var(--color-primary);
-    border-radius: 50%;
-    animation: isd-spin-minimal 0.7s linear infinite;
+/* ═══════════════════════════════════════════
+   SECTION 3: OFFICE LOCATIONS (Premium Cards)
+   ═══════════════════════════════════════════ */
+.isd-locations-section {
+    background: var(--color-bg);
+    padding: 140px 0;
 }
 
-.isd-btn-submit-minimal.is-loading .isd-consult-submit-minimal__arrow { display: none; }
-.isd-btn-submit-minimal.is-loading .isd-consult-submit-minimal__loader { display: block; }
-
-@keyframes isd-spin-minimal {
-    to { transform: rotate(360deg); }
+.isd-locations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.isd-consult-success-minimal {
-    margin-top: 32px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(200, 164, 93, 0.3);
-    animation: isd-fadeUp 0.5s ease-out;
+.isd-location-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    text-decoration: none;
 }
 
-.isd-consult-success-minimal__msg {
-    font-family: var(--font-body);
-    font-size: 1rem;
+.isd-location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06);
+}
+
+.isd-location-card__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.isd-location-card__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(200, 164, 93, 0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.isd-location-card__icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.25;
+}
+
+.isd-location-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
     color: var(--color-primary);
     margin: 0;
 }
 
-/* Minimal Locations */
-.isd-locations-minimal {
+.isd-location-card__details {
     display: flex;
     flex-direction: column;
-}
-
-.isd-location-minimal {
-    padding: 40px 0;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
-}
-
-.isd-location-minimal:first-child {
-    padding-top: 0;
-}
-
-.isd-location-minimal:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.isd-location-minimal__city {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: var(--weight-medium);
-    color: var(--color-primary);
-    margin: 0 0 16px;
-}
-
-.isd-location-minimal__details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.isd-location-minimal__address,
-.isd-location-minimal__link {
+    gap: 16px;
     font-family: var(--font-body);
     font-size: 0.9375rem;
-    line-height: 1.6;
     color: var(--color-text-gray);
+    line-height: 1.6;
 }
 
-.isd-location-minimal__contacts {
+.isd-location-card__contact {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.isd-location-minimal__link {
-    text-decoration: none;
-    background: none;
-    border: none;
-    padding: 0;
-    text-align: left;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.isd-location-minimal__link:hover {
+.isd-location-card__contact a {
     color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.isd-location-minimal__directions {
-    grid-column: 1 / -1;
+.isd-location-card__contact a:hover {
+    color: var(--color-accent);
+}
+
+.isd-location-card__link {
+    margin-top: auto;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    text-decoration: none;
-    margin-top: 8px;
-    transition: color 0.3s ease;
+    transition: gap 0.3s ease;
 }
 
-.isd-location-minimal__directions svg {
-    transition: transform 0.3s ease;
-}
-
-.isd-location-minimal__directions:hover {
-    color: var(--color-accent);
-}
-.isd-location-minimal__directions:hover svg {
-    transform: translate(2px, -2px);
+.isd-location-card:hover .isd-location-card__link {
+    gap: 12px;
 }
 
 /* ═══════════════════════════════════════════
-   SECTION 3: MAP
+   SECTION 4: PREMIUM ACCORDION FAQ
    ═══════════════════════════════════════════ */
-.isd-contact-map {
-    padding: 0;
-}
-.isd-contact-map__wrapper {
-    width: 100%;
-}
-.isd-contact-map__iframe {
-    width: 100%;
-    height: 60vh;
-    min-height: 400px;
-    filter: grayscale(100%) contrast(1.2) brightness(0.9);
-}
-
-/* Hide old pins / captions for minimalism */
-.isd-contact-map__pins,
-.isd-contact-map__caption {
-    display: none;
-}
-
-/* ═══════════════════════════════════════════
-   SECTION 4: FAQ (Minimal)
-   ═══════════════════════════════════════════ */
-.isd-faq-minimal {
-    background: var(--color-bg);
+.isd-faq-premium {
+    background: #FFFFFF;
     padding-top: 140px;
     padding-bottom: 140px;
 }
 
-.isd-faq-minimal__header {
+.isd-faq-premium__header {
     text-align: center;
     margin-bottom: 80px;
 }
 
-.isd-faq-minimal__heading {
+.isd-faq-premium__heading {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: var(--weight-medium);
     color: var(--color-primary);
     margin: 16px 0 0;
 }
 
-.isd-faq-minimal__list {
-    border-top: 1px solid rgba(17, 17, 17, 0.1);
+.isd-faq-premium__list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.isd-faq-minimal__item {
-    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+.isd-faq-premium__item {
+    background: #FFFFFF;
+    border: 1px solid rgba(17, 17, 17, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.isd-faq-minimal__trigger {
+.isd-faq-premium__item:hover {
+    border-color: rgba(200, 164, 93, 0.4);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+}
+
+.isd-faq-premium__item.is-open {
+    border-color: var(--color-accent);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+}
+
+.isd-faq-premium__trigger {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 0;
+    padding: 32px;
     background: none;
     border: none;
     cursor: pointer;
@@ -417,68 +399,89 @@
     color: var(--color-primary);
 }
 
-.isd-faq-minimal__question {
+.isd-faq-premium__question {
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    font-weight: var(--weight-medium);
+    font-weight: 500;
     transition: color 0.3s ease;
+    padding-right: 24px;
 }
 
-.isd-faq-minimal__trigger:hover .isd-faq-minimal__question,
-.isd-faq-minimal__trigger[aria-expanded="true"] .isd-faq-minimal__question {
+.isd-faq-premium__trigger:hover .isd-faq-premium__question,
+.isd-faq-premium__item.is-open .isd-faq-premium__question {
     color: var(--color-accent);
 }
 
-.isd-faq-minimal__icon {
+.isd-faq-premium__icon {
     flex-shrink: 0;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
 }
 
-.isd-faq-minimal__trigger[aria-expanded="true"] .isd-faq-minimal__icon {
-    transform: rotate(45deg);
+.isd-faq-premium__item.is-open .isd-faq-premium__icon {
+    transform: rotate(180deg);
+    color: var(--color-accent);
 }
 
-.isd-faq-minimal__panel {
-    padding-bottom: 32px;
+.isd-faq-premium__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.isd-faq-minimal__answer {
+.isd-faq-premium__panel-inner {
+    padding: 0 32px 32px;
+}
+
+.isd-faq-premium__answer {
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.8;
     color: var(--color-text-gray);
     margin: 0;
-    max-width: 700px;
 }
 
 /* ═══════════════════════════════════════════
-   SECTION 5: CTA
+   SECTION 5: FINAL CTA
    ═══════════════════════════════════════════ */
 .isd-contact-cta {
     position: relative;
-    padding: 140px 0;
+    padding: 160px 0;
     background-color: #111111;
     overflow: hidden;
+    text-align: center;
 }
 
 .isd-contact-cta__bg {
     position: absolute;
     inset: 0;
-    opacity: 0.4;
+    z-index: 0;
 }
 
 .isd-contact-cta__bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.3);
+}
+
+.isd-contact-cta__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(17,17,17,0.9), rgba(17,17,17,0.4));
+    z-index: 1;
 }
 
 .isd-contact-cta__inner {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .isd-contact-cta__heading {
@@ -493,30 +496,83 @@
 
 .isd-contact-cta__desc {
     font-family: var(--font-body);
-    font-size: 1.0625rem;
-    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
-    margin-bottom: 36px;
+    margin-bottom: 48px;
+    max-width: 600px;
 }
 
 .isd-contact-cta__actions {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 56px;
+}
+
+.isd-contact-cta__contacts {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.isd-contact-cta__link {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.isd-contact-cta__link:hover {
+    color: var(--color-accent);
+}
+
+.isd-contact-cta__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+.isd-contact-cta__badge svg {
+    color: var(--color-accent);
+    width: 18px;
+    height: 18px;
 }
 
 /* ═══════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════ */
 @media (max-width: 1024px) {
-    .isd-contact-hero-minimal__info { gap: 24px; justify-content: space-between; }
-    .isd-consultation-minimal__grid { grid-template-columns: 1fr; gap: 60px; }
+    .isd-contact-hero-minimal__info { gap: 24px; }
+    .isd-locations-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
     .isd-contact-hero-minimal__info { flex-direction: column; align-items: center; text-align: center; border-top: none; }
     .isd-contact-hero-minimal__info-item { text-align: center; }
-    .isd-form-row-minimal { grid-template-columns: 1fr; }
-    .isd-location-minimal__details { grid-template-columns: 1fr; gap: 16px; }
+    .isd-form-row-minimal { grid-template-columns: 1fr; gap: 32px; margin-bottom: 32px; }
+    .isd-input-group-minimal { margin-bottom: 32px; }
+    
+    .isd-faq-premium__trigger { padding: 24px; }
+    .isd-faq-premium__panel-inner { padding: 0 24px 24px; }
 }
