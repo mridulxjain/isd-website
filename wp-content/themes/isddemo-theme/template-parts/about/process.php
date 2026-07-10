@@ -1,36 +1,29 @@
 <?php
 /**
- * Template Part: How We Work — Premium Process Timeline
+ * Template Part: How We Work
  */
 $steps = [
-    ['num' => '01', 'title' => 'Discovery',       'desc' => 'We start by listening — deeply understanding your lifestyle, aspirations and the space we are working with.'],
-    ['num' => '02', 'title' => 'Planning',         'desc' => 'A detailed project roadmap: timelines, budget frameworks, team allocation and scope definition.'],
-    ['num' => '03', 'title' => 'Design',           'desc' => 'Concept boards, material palettes, furniture layouts and the architectural language of your space.'],
-    ['num' => '04', 'title' => 'Visualisation',    'desc' => 'Photorealistic 3D renders and virtual walkthroughs for your approval before any work begins.'],
-    ['num' => '05', 'title' => 'Execution',        'desc' => 'Expert craftsmen and project managers bring the design to life — precisely, on time and on budget.'],
-    ['num' => '06', 'title' => 'Final Styling',    'desc' => 'The finishing touches: accessories, lighting, art and the last details that transform a house into a home.'],
+    ['num' => '01', 'title' => 'Consultation',    'desc' => 'We begin by listening — learning your lifestyle, aspirations and the specific character of your space.'],
+    ['num' => '02', 'title' => 'Planning',         'desc' => 'A clear project roadmap: timelines, budgets, scope and team assignment — before a single sketch is drawn.'],
+    ['num' => '03', 'title' => 'Design',           'desc' => 'Concept development, mood boards, material palettes and detailed drawings that define the language of your space.'],
+    ['num' => '04', 'title' => '3D Visualisation', 'desc' => 'Photorealistic renders so you can experience every room before execution begins. Nothing proceeds without your approval.'],
+    ['num' => '05', 'title' => 'Execution',        'desc' => 'Expert craftsmen, rigorous site management and precise quality control — delivered on time and on budget.'],
+    ['num' => '06', 'title' => 'Final Styling',    'desc' => 'The finishing layer: accessories, art, lighting and the considered details that make a house feel like a home.'],
 ];
 ?>
-<section class="isd-about-process isd-section" aria-label="How We Work">
+<section class="isd-ab-process isd-section" aria-label="How We Work">
     <div class="isd-container">
-        <div class="isd-about-process__header">
+        <div class="isd-ab-process__header">
             <span class="isd-label isd-fade-up">Process</span>
-            <h2 class="isd-about-process__heading isd-fade-up isd-delay-1">How We Work</h2>
-            <p class="isd-about-process__sub isd-fade-up isd-delay-2">Six considered stages. One seamless experience from first brief to final reveal.</p>
+            <h2 class="isd-ab-process__heading isd-fade-up isd-delay-1">How We Work</h2>
+            <p class="isd-ab-process__intro isd-fade-up isd-delay-2">Six considered stages, one seamless experience.</p>
         </div>
-        <div class="isd-about-process__timeline" role="list">
+        <div class="isd-ab-process__grid" role="list">
             <?php foreach ( $steps as $i => $step ) : ?>
-            <div class="isd-about-process__step isd-fade-up isd-delay-<?php echo $i + 1; ?>" role="listitem">
-                <div class="isd-about-process__step-num" aria-hidden="true"><?php echo esc_html( $step['num'] ); ?></div>
-                <div class="isd-about-process__step-content">
-                    <h3 class="isd-about-process__step-title"><?php echo esc_html( $step['title'] ); ?></h3>
-                    <p class="isd-about-process__step-desc"><?php echo esc_html( $step['desc'] ); ?></p>
-                </div>
-                <?php if ( $i < count($steps) - 1 ) : ?>
-                <div class="isd-about-process__connector" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A45D" stroke-width="1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                </div>
-                <?php endif; ?>
+            <div class="isd-ab-process__step isd-fade-up isd-delay-<?php echo ($i % 3) + 1; ?>" role="listitem">
+                <span class="isd-ab-process__step-num" aria-hidden="true"><?php echo esc_html($step['num']); ?></span>
+                <h3 class="isd-ab-process__step-title"><?php echo esc_html($step['title']); ?></h3>
+                <p class="isd-ab-process__step-desc"><?php echo esc_html($step['desc']); ?></p>
             </div>
             <?php endforeach; ?>
         </div>

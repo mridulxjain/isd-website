@@ -1,36 +1,43 @@
 <?php
 /**
  * Template Part: Our Expertise
+ * Editorial list layout with alternating image/text
  */
 $services = [
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 28V12l12-8 12 8v16H4z"/><rect x="11" y="18" width="10" height="10"/></svg>',          'title' => 'Residential Interiors',   'desc' => 'Luxury living spaces designed around your lifestyle — from drawing rooms to master suites.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="8" width="26" height="20" rx="2"/><path d="M3 14h26M10 8V5a2 2 0 014 0v3M18 8V5a2 2 0 014 0v3"/></svg>', 'title' => 'Commercial Interiors',   'desc' => 'Office, retail and hospitality spaces that amplify your brand and inspire productivity.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 26V8l10-5 10 5v18"/><rect x="12" y="14" width="8" height="8"/><path d="M3 26h26"/></svg>',             'title' => 'Turnkey Projects',         'desc' => 'Complete end-to-end execution — design, procurement, construction and final styling.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="4" width="24" height="24" rx="4"/><path d="M10 16h12M16 10v12"/></svg>',                              'title' => 'Exterior Design',          'desc' => 'Facades, landscaping and curb appeal — making a lasting first impression from the outside.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 12h24M4 20h24M12 4v24M20 4v24"/><rect x="4" y="4" width="24" height="24" rx="2"/></svg>',              'title' => 'Space Planning',           'desc' => 'Intelligent spatial layouts that maximise functionality, flow and natural light.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 28l8-8 6 4 10-14"/><circle cx="26" cy="6" r="3"/></svg>',                                              'title' => '3D Visualisation',         'desc' => 'Photorealistic renders and virtual walkthroughs — see your space before a nail is driven.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 24V10M16 24V6M24 24V14"/><path d="M4 28h24"/></svg>',                                                    'title' => 'Luxury Renovation',        'desc' => 'Transforming existing spaces with precision — minimal disruption, maximum impact.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="4" y="10" width="14" height="18" rx="2"/><rect x="14" y="4" width="14" height="14" rx="2"/></svg>',       'title' => 'Furniture Planning',       'desc' => 'Custom furniture selection and space-conscious planning that complements your interior.'],
-    ['icon' => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="16" cy="16" r="6"/><path d="M16 4v4M16 24v4M4 16h4M24 16h4"/></svg>',                                  'title' => 'Material Selection',       'desc' => 'Curated stone, wood, metal and textile choices sourced for beauty, durability and originality.'],
+    ['title' => 'Interior Design',      'desc' => 'Full-scope residential and commercial interior design — concept, documentation and execution.', 'img' => 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Exterior Design',      'desc' => 'Facades, landscaping and curb appeal that make a confident, lasting first impression.', 'img' => 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Turnkey Projects',     'desc' => 'End-to-end project delivery — design, procurement, construction and styling under one roof.', 'img' => 'https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Residential',          'desc' => 'Luxury homes, villas and apartments designed around how you actually live.', 'img' => 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Commercial',           'desc' => 'Offices, retail, restaurants and hospitality spaces that amplify your brand identity.', 'img' => 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Luxury Renovation',    'desc' => 'Precision transformations of existing spaces — minimal disruption, maximum impact.', 'img' => 'https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Furniture Planning',   'desc' => 'Custom furniture curation and space-conscious planning that ties every room together.', 'img' => 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Space Planning',       'desc' => 'Intelligent layouts that maximise flow, function and natural light for every square foot.', 'img' => 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Lighting Design',      'desc' => 'Layered, considered lighting schemes that define mood, depth and atmosphere.', 'img' => 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=600&q=75'],
+    ['title' => 'Material Selection',   'desc' => 'Curated stone, wood, metal and textile palettes sourced for beauty, longevity and originality.', 'img' => 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=75'],
 ];
 ?>
-<section class="isd-about-expertise isd-section" aria-label="Our Expertise">
+<section class="isd-ab-expertise isd-section" aria-label="Our Expertise">
     <div class="isd-container">
-        <div class="isd-about-expertise__header">
-            <span class="isd-label isd-fade-up">Services</span>
-            <h2 class="isd-about-expertise__heading isd-fade-up isd-delay-1">Our Expertise</h2>
-            <p class="isd-about-expertise__sub isd-fade-up isd-delay-2">Nine focused disciplines — one seamless creative process.</p>
+        <div class="isd-ab-expertise__header">
+            <span class="isd-label isd-fade-up">Expertise</span>
+            <h2 class="isd-ab-expertise__heading isd-fade-up isd-delay-1">What We Do Best</h2>
         </div>
-        <div class="isd-about-expertise__grid">
+        <ul class="isd-ab-expertise__list" role="list">
             <?php foreach ( $services as $i => $svc ) : ?>
-            <article class="isd-about-expertise__card isd-fade-up isd-delay-<?php echo ( $i % 4 ) + 1; ?>" aria-label="<?php echo esc_attr( $svc['title'] ); ?>">
-                <div class="isd-about-expertise__card-icon" aria-hidden="true">
-                    <?php echo $svc['icon']; // phpcs:ignore ?>
+            <li class="isd-ab-expertise__item isd-fade-up" role="listitem">
+                <div class="isd-ab-expertise__num" aria-hidden="true"><?php echo str_pad($i + 1, 2, '0', STR_PAD_LEFT); ?></div>
+                <div class="isd-ab-expertise__item-img-wrap">
+                    <img src="<?php echo esc_url($svc['img']); ?>" alt="<?php echo esc_attr($svc['title']); ?>" class="isd-ab-expertise__item-img" loading="lazy">
                 </div>
-                <h3 class="isd-about-expertise__card-title"><?php echo esc_html( $svc['title'] ); ?></h3>
-                <p class="isd-about-expertise__card-desc"><?php echo esc_html( $svc['desc'] ); ?></p>
-            </article>
+                <div class="isd-ab-expertise__item-body">
+                    <h3 class="isd-ab-expertise__item-title"><?php echo esc_html($svc['title']); ?></h3>
+                    <p class="isd-ab-expertise__item-desc"><?php echo esc_html($svc['desc']); ?></p>
+                </div>
+                <div class="isd-ab-expertise__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </div>
+            </li>
             <?php endforeach; ?>
-        </div>
+        </ul>
     </div>
 </section>

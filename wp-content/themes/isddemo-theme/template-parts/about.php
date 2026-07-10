@@ -1,50 +1,45 @@
 <?php
 /**
- * Template Part: About Section
+ * Template Part: About Intro (Homepage Teaser)
+ * A minimal section pointing visitors to /about
  */
-$about_image   = function_exists( 'get_field' ) ? get_field( 'about_image' ) : null;
-$about_title   = function_exists( 'get_field' ) ? get_field( 'about_title' ) : 'Designing Dreams Into Reality Since 2009';
-$about_text1   = function_exists( 'get_field' ) ? get_field( 'about_text_1' ) : 'With over 15 years of experience in luxury interior design, Indian Shape Designer has become the most trusted name for premium interiors in Delhi NCR. We specialize in creating spaces that are both beautiful and deeply personal.';
-$about_text2   = function_exists( 'get_field' ) ? get_field( 'about_text_2' ) : 'Our team of expert designers work closely with clients from concept to completion, ensuring every detail is crafted with precision and purpose.';
+$intro_label   = function_exists('get_field') ? get_field('hp_about_label')   : 'About Us';
+$intro_heading = function_exists('get_field') ? get_field('hp_about_heading') : "A Studio Built on Craft,\nDriven by Design.";
+$intro_text    = function_exists('get_field') ? get_field('hp_about_text')    : 'Interior Shapes & Designs is a New Delhi-based design studio creating luxury interiors, exteriors and turnkey spaces for discerning clients across India and internationally.';
+$intro_image   = function_exists('get_field') ? get_field('hp_about_image')   : null;
 ?>
-<section id="about" class="isd-about isd-section">
+<section class="isd-hp-about isd-section" aria-label="About the Studio">
     <div class="isd-container">
-        <div class="isd-about__grid">
-            <div class="isd-about__image-wrapper isd-scale-in">
-                <?php if ( $about_image ) : ?>
-                    <img src="<?php echo esc_url( $about_image['url'] ); ?>" alt="<?php echo esc_attr( $about_image['alt'] ?? 'Our Studio' ); ?>" class="isd-about__image" loading="lazy">
-                <?php else : ?>
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury interior design studio" class="isd-about__image" loading="lazy">
-                <?php endif; ?>
-                <div class="isd-about__image-frame" aria-hidden="true"></div>
-                <div class="isd-about__experience-badge">
-                    <span class="isd-about__badge-number">15+</span>
-                    <span class="isd-about__badge-text">Years of Excellence</span>
+        <div class="isd-hp-about__grid">
+            <div class="isd-hp-about__image-col isd-fade-up">
+                <div class="isd-hp-about__image-wrap">
+                    <?php if ( $intro_image && !empty($intro_image['url']) ) : ?>
+                        <img src="<?php echo esc_url($intro_image['url']); ?>" alt="<?php echo esc_attr($intro_image['alt'] ?? 'Design Studio'); ?>" class="isd-hp-about__image" loading="lazy">
+                    <?php else : ?>
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80" alt="Luxury interior design studio workspace" class="isd-hp-about__image" loading="lazy">
+                    <?php endif; ?>
+                    <div class="isd-hp-about__badge">
+                        <span class="isd-hp-about__badge-num">15+</span>
+                        <span class="isd-hp-about__badge-txt">Years of Excellence</span>
+                    </div>
                 </div>
             </div>
-            <div class="isd-about__content">
-                <span class="isd-label isd-fade-up">About Us</span>
-                <h2 class="isd-title isd-title--md isd-fade-up isd-delay-1"><?php echo esc_html( $about_title ); ?></h2>
-                <p class="isd-about__text isd-fade-up isd-delay-2"><?php echo esc_html( $about_text1 ); ?></p>
-                <p class="isd-about__text isd-fade-up isd-delay-2"><?php echo esc_html( $about_text2 ); ?></p>
-                <div class="isd-about__timeline">
-                    <div class="isd-about__milestone isd-fade-up isd-delay-3">
-                        <span class="isd-about__milestone-year">2009</span>
-                        <div class="isd-about__milestone-content"><h4>Founded in Delhi</h4><p>Started our journey with a passion for luxury interiors.</p></div>
+            <div class="isd-hp-about__content isd-fade-up isd-delay-2">
+                <span class="isd-label"><?php echo esc_html($intro_label ?: 'About Us'); ?></span>
+                <h2 class="isd-hp-about__heading"><?php echo nl2br(esc_html($intro_heading ?: "A Studio Built on Craft,\nDriven by Design.")); ?></h2>
+                <p class="isd-hp-about__text"><?php echo esc_html($intro_text); ?></p>
+                <div class="isd-hp-about__stats">
+                    <div class="isd-hp-about__stat">
+                        <strong>500+</strong><span>Projects Delivered</span>
                     </div>
-                    <div class="isd-about__milestone isd-fade-up isd-delay-4">
-                        <span class="isd-about__milestone-year">2015</span>
-                        <div class="isd-about__milestone-content"><h4>Expanded to NCR</h4><p>Grew our team to 50+ designers and craftsmen.</p></div>
+                    <div class="isd-hp-about__stat">
+                        <strong>4</strong><span>Office Locations</span>
                     </div>
-                    <div class="isd-about__milestone isd-fade-up isd-delay-5">
-                        <span class="isd-about__milestone-year">2023</span>
-                        <div class="isd-about__milestone-content"><h4>500+ Projects Completed</h4><p>Delivered luxury transformations across 500+ homes and offices.</p></div>
+                    <div class="isd-hp-about__stat">
+                        <strong>98%</strong><span>Client Satisfaction</span>
                     </div>
                 </div>
-                <div class="isd-about__actions isd-fade-up isd-delay-5">
-                    <a href="#contact" class="isd-btn isd-btn--primary">Learn Our Story</a>
-                    <a href="#contact" class="isd-btn isd-btn--ghost">Get In Touch</a>
-                </div>
+                <a href="<?php echo esc_url(home_url('/about')); ?>" class="isd-btn isd-btn--outline">Learn Our Story</a>
             </div>
         </div>
     </div>

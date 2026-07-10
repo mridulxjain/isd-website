@@ -1,50 +1,30 @@
 <?php
 /**
  * Template Part: Talk To Us CTA
- * ACF-ready: about_cta_heading, about_cta_desc, about_cta_btn_primary, about_cta_btn_secondary
+ * ACF: about_cta_image, about_cta_heading, about_cta_desc, about_cta_btn1, about_cta_btn2
  */
-$heading = function_exists('get_field') ? get_field('about_cta_heading')       : "Let's Create Something Beautiful Together";
-$desc    = function_exists('get_field') ? get_field('about_cta_desc')          : 'Whether you are designing your dream home, renovating an office or planning a luxury interior — our designers are ready to help.';
-$btn1    = function_exists('get_field') ? get_field('about_cta_btn_primary')   : ['title' => 'Talk To Us',         'url' => '/contact'];
-$btn2    = function_exists('get_field') ? get_field('about_cta_btn_secondary') : ['title' => 'Book Consultation',  'url' => '/contact#consultation'];
+$image   = function_exists('get_field') ? get_field('about_cta_image')   : null;
+$heading = function_exists('get_field') ? get_field('about_cta_heading') : "Let's Build Something Extraordinary Together";
+$desc    = function_exists('get_field') ? get_field('about_cta_desc')    : "Whether you're building your dream home or transforming a commercial space, our designers are ready to bring your vision to life.";
+$btn1    = function_exists('get_field') ? get_field('about_cta_btn1')    : ['title' => 'Talk To Us',        'url' => '/contact'];
+$btn2    = function_exists('get_field') ? get_field('about_cta_btn2')    : ['title' => 'Book Consultation', 'url' => '/contact#consultation'];
 ?>
-<section class="isd-about-cta" aria-label="Talk To Us">
-    <div class="isd-about-cta__bg" aria-hidden="true">
-        <svg viewBox="0 0 1440 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="1440" height="700" fill="#111110"/>
-            <rect x="0" y="0" width="1440" height="700" fill="#0a0a09" opacity="0.7"/>
-            <!-- Elegant room lines -->
-            <line x1="720" y1="0" x2="0" y2="700" stroke="#C8A45D" stroke-width="0.5" opacity="0.1"/>
-            <line x1="720" y1="0" x2="1440" y2="700" stroke="#C8A45D" stroke-width="0.5" opacity="0.1"/>
-            <line x1="0" y1="350" x2="1440" y2="350" stroke="#C8A45D" stroke-width="0.3" opacity="0.08"/>
-            <circle cx="720" cy="350" r="280" fill="none" stroke="#C8A45D" stroke-width="0.4" opacity="0.12"/>
-            <circle cx="720" cy="350" r="180" fill="none" stroke="#C8A45D" stroke-width="0.3" opacity="0.08"/>
-        </svg>
+<section class="isd-ab-cta" aria-label="Call To Action">
+    <div class="isd-ab-cta__bg">
+        <?php if ( $image && !empty($image['url']) ) : ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="" role="presentation" class="isd-ab-cta__photo" loading="lazy">
+        <?php else : ?>
+            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1800&q=75" alt="" role="presentation" class="isd-ab-cta__photo" loading="lazy">
+        <?php endif; ?>
+        <div class="isd-ab-cta__overlay"></div>
     </div>
-    <div class="isd-container isd-about-cta__inner">
-        <span class="isd-label isd-about-cta__label isd-fade-up">Start Your Project</span>
-        <h2 class="isd-about-cta__heading isd-fade-up isd-delay-1">
-            <?php echo wp_kses_post( $heading ?: "Let's Create Something Beautiful Together" ); ?>
-        </h2>
-        <p class="isd-about-cta__desc isd-fade-up isd-delay-2">
-            <?php echo esc_html( $desc ?: 'Whether you are designing your dream home, renovating an office or planning a luxury interior — our designers are ready to help.' ); ?>
-        </p>
-        <div class="isd-about-cta__actions isd-fade-up isd-delay-3">
-            <a href="<?php echo esc_url( ($btn1['url'] ?? '/contact') ); ?>" class="isd-btn isd-btn--primary">
-                <?php echo esc_html( ($btn1['title'] ?? 'Talk To Us') ); ?>
-            </a>
-            <a href="<?php echo esc_url( ($btn2['url'] ?? '/contact#consultation') ); ?>" class="isd-btn isd-btn--outline-white">
-                <?php echo esc_html( ($btn2['title'] ?? 'Book Consultation') ); ?>
-            </a>
-        </div>
-        <div class="isd-about-cta__offices isd-fade-up isd-delay-4">
-            <span>Delhi</span>
-            <span class="isd-about-cta__sep" aria-hidden="true">·</span>
-            <span>Lucknow</span>
-            <span class="isd-about-cta__sep" aria-hidden="true">·</span>
-            <span>Saharanpur</span>
-            <span class="isd-about-cta__sep" aria-hidden="true">·</span>
-            <span>New York</span>
+    <div class="isd-container isd-ab-cta__inner">
+        <span class="isd-label isd-ab-cta__label isd-fade-up">Start Your Project</span>
+        <h2 class="isd-ab-cta__heading isd-fade-up isd-delay-1"><?php echo wp_kses_post($heading); ?></h2>
+        <p class="isd-ab-cta__desc isd-fade-up isd-delay-2"><?php echo esc_html($desc); ?></p>
+        <div class="isd-ab-cta__actions isd-fade-up isd-delay-3">
+            <a href="<?php echo esc_url($btn1['url'] ?? '/contact'); ?>" class="isd-btn isd-btn--primary"><?php echo esc_html($btn1['title'] ?? 'Talk To Us'); ?></a>
+            <a href="<?php echo esc_url($btn2['url'] ?? '/contact#consultation'); ?>" class="isd-btn isd-btn--outline-white"><?php echo esc_html($btn2['title'] ?? 'Book Consultation'); ?></a>
         </div>
     </div>
 </section>

@@ -1,49 +1,39 @@
 <?php
 /**
- * Template Part: Design Philosophy
+ * Template Part: Our Philosophy
+ * Three premium editorial cards with line illustrations
  */
-$quote = 'Great spaces are never accidental. They are carefully imagined, designed and crafted.';
 $cards = [
     [
-        'icon'  => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 4v24M4 16h24"/><circle cx="16" cy="16" r="12"/></svg>',
-        'title' => 'Functionality',
-        'desc'  => 'Every element serves a purpose. Beauty and utility are never opposites — in our work, they are inseparable.',
-    ],
-    [
-        'icon'  => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 20l8-8 5 5 7-10 4 4"/></svg>',
         'title' => 'Creativity',
-        'desc'  => 'We bring a fresh perspective to each brief, pushing beyond the expected to create spaces that genuinely surprise and delight.',
+        'desc'  => 'We approach every brief with fresh eyes and genuine curiosity. Ideas are never borrowed — they are drawn from the specific character of your space, your life and your vision.',
+        'svg'   => '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="0.8"><path d="M40 8 Q60 20 60 40 Q60 60 40 72 Q20 60 20 40 Q20 20 40 8Z"/><line x1="40" y1="8" x2="40" y2="72"/><line x1="20" y1="40" x2="60" y2="40"/><circle cx="40" cy="40" r="8"/></svg>',
     ],
     [
-        'icon'  => '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="16" cy="16" r="12"/><path d="M10 16l4 4 8-8"/></svg>',
+        'title' => 'Functionality',
+        'desc'  => 'Beauty without utility is decoration. We design spaces that perform — where every element earns its place by improving the way you live, work or host.',
+        'svg'   => '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="0.8"><rect x="16" y="16" width="48" height="48"/><line x1="16" y1="32" x2="64" y2="32"/><line x1="16" y1="48" x2="64" y2="48"/><line x1="32" y1="16" x2="32" y2="64"/><line x1="48" y1="16" x2="48" y2="64"/></svg>',
+    ],
+    [
         'title' => 'Timeless Elegance',
-        'desc'  => 'We resist the lure of trends. Our designs are rooted in proportion, quality and restraint — built to look as beautiful in twenty years as they do today.',
+        'desc'  => 'We do not follow trends — we understand them, then set them aside. Our spaces are designed to look as considered in twenty years as they do today.',
+        'svg'   => '<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="40" cy="40" r="28"/><circle cx="40" cy="40" r="16"/><circle cx="40" cy="40" r="4"/><line x1="40" y1="12" x2="40" y2="24"/><line x1="40" y1="56" x2="40" y2="68"/><line x1="12" y1="40" x2="24" y2="40"/><line x1="56" y1="40" x2="68" y2="40"/></svg>',
     ],
 ];
 ?>
-<section class="isd-about-philosophy" aria-label="Design Philosophy">
-    <div class="isd-about-philosophy__bg" aria-hidden="true">
-        <svg viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <rect width="1440" height="900" fill="#111110"/>
-            <rect x="200" y="80" width="1040" height="740" fill="none" stroke="#C8A45D" stroke-width="0.5" opacity="0.2"/>
-            <rect x="280" y="160" width="880" height="580" fill="none" stroke="#C8A45D" stroke-width="0.3" opacity="0.12"/>
-            <line x1="0" y1="450" x2="1440" y2="450" stroke="#C8A45D" stroke-width="0.3" opacity="0.1"/>
-        </svg>
-    </div>
-    <div class="isd-container isd-about-philosophy__inner">
-        <div class="isd-about-philosophy__quote-wrap">
-            <span class="isd-about-philosophy__quote-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote class="isd-about-philosophy__quote isd-fade-up"><?php echo esc_html( $quote ); ?></blockquote>
-            <span class="isd-label isd-about-philosophy__quote-attr">Our Design Philosophy</span>
+<section class="isd-ab-philosophy isd-section" aria-label="Design Philosophy">
+    <div class="isd-container">
+        <div class="isd-ab-philosophy__header">
+            <span class="isd-label isd-fade-up">Philosophy</span>
+            <h2 class="isd-ab-philosophy__heading isd-fade-up isd-delay-1">What We Believe In</h2>
+            <p class="isd-ab-philosophy__intro isd-fade-up isd-delay-2">Great spaces are never accidental. They are the result of three values we hold above all else.</p>
         </div>
-        <div class="isd-about-philosophy__cards">
-            <?php foreach ( $cards as $i => $card ) : ?>
-            <article class="isd-about-philosophy__card isd-fade-up isd-delay-<?php echo $i + 1; ?>">
-                <div class="isd-about-philosophy__card-icon" aria-hidden="true">
-                    <?php echo $card['icon']; // phpcs:ignore ?>
-                </div>
-                <h3 class="isd-about-philosophy__card-title"><?php echo esc_html( $card['title'] ); ?></h3>
-                <p class="isd-about-philosophy__card-desc"><?php echo esc_html( $card['desc'] ); ?></p>
+        <div class="isd-ab-philosophy__cards">
+            <?php foreach ( $cards as $i => $c ) : ?>
+            <article class="isd-ab-philosophy__card isd-fade-up isd-delay-<?php echo $i + 1; ?>" aria-label="<?php echo esc_attr($c['title']); ?>">
+                <div class="isd-ab-philosophy__illus" aria-hidden="true"><?php echo $c['svg']; // phpcs:ignore ?></div>
+                <h3 class="isd-ab-philosophy__card-title"><?php echo esc_html($c['title']); ?></h3>
+                <p class="isd-ab-philosophy__card-desc"><?php echo esc_html($c['desc']); ?></p>
             </article>
             <?php endforeach; ?>
         </div>
