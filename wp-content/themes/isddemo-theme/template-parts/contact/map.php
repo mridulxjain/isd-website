@@ -46,9 +46,6 @@ if ( empty($offices) ) {
             <?php foreach ( $offices as $office ) : ?>
                 <a href="<?php echo esc_url($office['link']); ?>" target="_blank" rel="noopener" class="isd-location-card">
                     <div class="isd-location-card__header">
-                        <div class="isd-location-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                        </div>
                         <h3 class="isd-location-card__name"><?php echo esc_html($office['name']); ?></h3>
                     </div>
                     <div class="isd-location-card__details">
@@ -62,7 +59,6 @@ if ( empty($offices) ) {
                     </div>
                     <div class="isd-location-card__link">
                         View on Google Maps
-                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                     </div>
                 </a>
             <?php endforeach; ?>
