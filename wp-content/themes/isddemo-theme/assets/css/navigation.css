@@ -21,9 +21,10 @@
     pointer-events: all;
 }
 
-/* ── BODY PADDING ── */
-body {
-    padding-top: 84px;
+/* ── MAIN CONTENT PADDING ── */
+.isd-main {
+    padding-top: 160px; /* Push content well below the navbar (approx 30% down) */
+    min-height: 80vh;
 }
 
 /* ── NAVBAR ── */
@@ -169,7 +170,8 @@ body {
     z-index: 101;
 }
 
-.isd-nav__item.is-hovered .isd-mega {
+.isd-nav__item.is-hovered .isd-mega,
+.isd-nav__item--has-mega:hover .isd-mega {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     pointer-events: all;
