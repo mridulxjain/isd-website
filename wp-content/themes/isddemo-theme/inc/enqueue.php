@@ -51,10 +51,27 @@ function isddemo_enqueue_assets() {
     }
 
     // Contact page JS (only on contact page template)
-    if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) ) {
+    if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) || get_query_var( 'isd_contact' ) ) {
         wp_enqueue_script(
             'isd-contact',
             $uri . '/assets/js/contact.js',
+            [],
+            $ver,
+            true
+        );
+    }
+
+    // About page CSS & JS
+    if ( get_query_var( 'isd_about' ) ) {
+        wp_enqueue_style(
+            'isd-about',
+            $uri . '/assets/css/about.css',
+            [ 'isddemo-theme-style' ],
+            $ver
+        );
+        wp_enqueue_script(
+            'isd-about',
+            $uri . '/assets/js/about.js',
             [],
             $ver,
             true
