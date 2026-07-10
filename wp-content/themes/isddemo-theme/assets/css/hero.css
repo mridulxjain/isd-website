@@ -5,8 +5,8 @@
 
 .isd-hero {
     position: relative;
-    height: 100vh;
-    min-height: 700px;
+    height: calc(100vh - 84px); /* Fills screen perfectly BELOW navbar */
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,6 @@
     text-align: center;
     padding: 0 var(--container-padding);
     max-width: 900px;
-    margin-top: 80px; /* offset navbar */
 }
 
 .isd-hero__eyebrow {
