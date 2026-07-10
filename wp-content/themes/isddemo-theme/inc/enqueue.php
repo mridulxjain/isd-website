@@ -50,6 +50,17 @@ function isddemo_enqueue_assets() {
         );
     }
 
+    // Contact page JS (only on contact page template)
+    if ( is_page_template( 'page-contact.php' ) || is_page( 'contact' ) ) {
+        wp_enqueue_script(
+            'isd-contact',
+            $uri . '/assets/js/contact.js',
+            [],
+            $ver,
+            true
+        );
+    }
+
     // Comment reply
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
