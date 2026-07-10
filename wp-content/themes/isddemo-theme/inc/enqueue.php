@@ -29,10 +29,18 @@ function isddemo_enqueue_assets() {
         $ver
     );
 
+    // Global Navigation CSS
+    wp_enqueue_style(
+        'isd-navigation',
+        $uri . '/assets/css/navigation.css',
+        [ 'isddemo-theme-style' ],
+        $ver
+    );
+
     // Modular JS (deferred for performance)
     $js_files = [
         'isd-animations'    => 'assets/js/animations.js',
-        'isd-navbar'        => 'assets/js/navbar.js',
+        'isd-navigation'    => 'assets/js/navigation.js',
         'isd-counters'      => 'assets/js/counters.js',
         'isd-slider'        => 'assets/js/slider.js',
         'isd-testimonials'  => 'assets/js/testimonials.js',

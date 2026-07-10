@@ -11,6 +11,6 @@
 
 <a href="#content" class="skip-link sr-only"><?php esc_html_e( 'Skip to content', 'isddemo-theme' ); ?></a>
 
-<?php get_template_part( 'template-parts/navbar' ); ?>
+<?php get_template_part( 'template-parts/navigation/navbar' ); ?>
 
 <main id="content" class="isd-main" role="main">
