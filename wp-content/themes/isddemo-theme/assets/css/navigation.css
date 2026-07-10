@@ -23,8 +23,7 @@
 
 /* ── MAIN CONTENT PADDING ── */
 .isd-main {
-    padding-top: 160px; /* Push content well below the navbar (approx 30% down) */
-    min-height: 80vh;
+    padding-top: 84px; /* Start exactly below navbar */
 }
 
 /* ── NAVBAR ── */
@@ -164,14 +163,20 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0,0,0,0.06);
     padding: 20px;
+    
+    /* Robust Visibility Defaults */
+    display: block !important;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 220ms ease, transform 220ms ease;
+    
+    transition: opacity 220ms ease, transform 220ms ease, visibility 220ms ease;
     z-index: 101;
 }
 
 .isd-nav__item.is-hovered .isd-mega,
 .isd-nav__item--has-mega:hover .isd-mega {
+    visibility: visible;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
     pointer-events: all;
