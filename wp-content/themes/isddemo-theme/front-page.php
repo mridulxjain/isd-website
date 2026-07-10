@@ -12,7 +12,7 @@ get_template_part( 'template-parts/stats' );
 get_template_part( 'template-parts/about' );
 get_template_part( 'template-parts/services' );
 get_template_part( 'template-parts/why-choose' );
-get_template_part( 'template-parts/projects' );
+get_template_part( 'template-parts/portfolio-teaser' );
 get_template_part( 'template-parts/process' );
 get_template_part( 'template-parts/before-after' );
 get_template_part( 'template-parts/testimonials' );

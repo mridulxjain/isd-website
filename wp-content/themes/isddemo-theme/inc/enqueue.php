@@ -78,6 +78,23 @@ function isddemo_enqueue_assets() {
         );
     }
 
+    // Portfolio page CSS & JS
+    if ( get_query_var( 'isd_portfolio' ) || is_post_type_archive( 'isd_project' ) || is_tax( 'project_category' ) ) {
+        wp_enqueue_style(
+            'isd-portfolio',
+            $uri . '/assets/css/portfolio.css',
+            [ 'isddemo-theme-style' ],
+            $ver
+        );
+        wp_enqueue_script(
+            'isd-portfolio',
+            $uri . '/assets/js/portfolio.js',
+            [],
+            $ver,
+            true
+        );
+    }
+
     // Comment reply
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );

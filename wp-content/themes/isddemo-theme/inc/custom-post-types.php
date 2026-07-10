@@ -81,5 +81,38 @@ function isddemo_register_taxonomies() {
         'show_in_rest' => true,
         'rewrite'      => [ 'slug' => 'project-category' ],
     ] );
+
+    // Room Type
+    register_taxonomy( 'isd_room_type', 'isd_project', [
+        'labels' => [
+            'name'          => __( 'Room Types', 'isddemo-theme' ),
+            'singular_name' => __( 'Room Type', 'isddemo-theme' ),
+        ],
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'rewrite'      => [ 'slug' => 'room-type' ],
+    ] );
+
+    // Design Style
+    register_taxonomy( 'isd_design_style', 'isd_project', [
+        'labels' => [
+            'name'          => __( 'Design Styles', 'isddemo-theme' ),
+            'singular_name' => __( 'Design Style', 'isddemo-theme' ),
+        ],
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'rewrite'      => [ 'slug' => 'design-style' ],
+    ] );
+
+    // Construction Type
+    register_taxonomy( 'isd_construction_type', 'isd_project', [
+        'labels' => [
+            'name'          => __( 'Construction Types', 'isddemo-theme' ),
+            'singular_name' => __( 'Construction Type', 'isddemo-theme' ),
+        ],
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'rewrite'      => [ 'slug' => 'construction-type' ],
+    ] );
 }
 add_action( 'init', 'isddemo_register_taxonomies' );
