@@ -87,11 +87,6 @@
                 </form>
             </div>
 
-            <!-- RIGHT: Office Locations (45%) -->
-            <div class="isd-consultation-minimal__locations-wrapper isd-fade-up isd-delay-3">
-                <?php get_template_part( 'template-parts/contact/locations' ); ?>
-            </div>
-
         </div>
     </div>
 </section>
