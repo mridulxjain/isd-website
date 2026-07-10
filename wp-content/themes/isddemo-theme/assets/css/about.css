@@ -119,8 +119,8 @@
    ────────────────────────────────────────────── */
 .isd-ab-hero {
     position: relative;
-    height: 60vh;
-    min-height: 520px;
+    height: calc(100vh - 84px); /* Full screen to prevent cropped look */
+    min-height: 600px;
     display: flex;
     align-items: flex-end;
     overflow: hidden;

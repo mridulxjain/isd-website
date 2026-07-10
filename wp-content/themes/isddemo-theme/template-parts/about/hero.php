@@ -4,8 +4,8 @@
  * ACF: about_hero_label, about_hero_heading, about_hero_desc, about_hero_btn1, about_hero_btn2, about_hero_image
  */
 $label   = function_exists('get_field') ? get_field('about_hero_label')   : 'About Us';
-$heading = function_exists('get_field') ? get_field('about_hero_heading') : 'Designing Timeless Spaces,<br>Built Around People.';
-$desc    = function_exists('get_field') ? get_field('about_hero_desc')    : 'An architecture and interior design studio rooted in New Delhi, crafting spaces that balance beauty, purpose and the quiet luxury of everyday life.';
+$heading = function_exists('get_field') ? get_field('about_hero_heading') : 'A Legacy of Luxury,<br><em>Crafted for You.</em>';
+$desc    = function_exists('get_field') ? get_field('about_hero_desc')    : 'We are a premier interior design studio dedicated to creating breathtaking, bespoke spaces. We believe that true luxury lies in the flawless harmony of aesthetics and function.';
 $btn1    = function_exists('get_field') ? get_field('about_hero_btn1')    : ['title' => 'Talk To Us',        'url' => '/contact'];
 $btn2    = function_exists('get_field') ? get_field('about_hero_btn2')    : ['title' => 'Explore Portfolio', 'url' => '/#portfolio'];
 $image   = function_exists('get_field') ? get_field('about_hero_image')   : null;
@@ -15,7 +15,7 @@ $image   = function_exists('get_field') ? get_field('about_hero_image')   : null
         <?php if ( $image && !empty($image['url']) ) : ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="" role="presentation" class="isd-ab-hero__photo" loading="eager">
         <?php else : ?>
-            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1800&q=80" alt="" role="presentation" class="isd-ab-hero__photo" loading="eager">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80" alt="Luxury Interior" role="presentation" class="isd-ab-hero__photo" loading="eager">
         <?php endif; ?>
         <div class="isd-ab-hero__overlay"></div>
     </div>
