@@ -67,12 +67,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             </li>
 
             <li class="isd-navbar__item">
-                <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="isd-navbar__nav-link">Contact</a>
+                <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="isd-navbar__nav-link">Contact</a>
             </li>
         </ul>
 
         <!-- ── CTA BUTTON (Desktop) ── -->
-        <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="isd-navbar__cta" id="isd-navbar-cta">
+        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="isd-navbar__cta" id="isd-navbar-cta">
             Book Consultation
         </a>
 
@@ -146,12 +146,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
             <li><a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="isd-drawer__link">Portfolio</a></li>
             <li><a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="isd-drawer__link">Shop</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="isd-drawer__link">Contact</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="isd-drawer__link">Contact</a></li>
         </ul>
     </nav>
 
     <div class="isd-drawer__footer">
-        <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="isd-btn isd-btn--primary" style="width:100%;justify-content:center;">Book Consultation</a>
+        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="isd-btn isd-btn--primary" style="width:100%;justify-content:center;">Book Consultation</a>
     </div>
 
 </div><!-- /.isd-drawer -->

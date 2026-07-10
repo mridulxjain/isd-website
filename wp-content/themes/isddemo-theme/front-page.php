@@ -19,6 +19,5 @@ get_template_part( 'template-parts/testimonials' );
 get_template_part( 'template-parts/brands' );
 get_template_part( 'template-parts/blog' );
 get_template_part( 'template-parts/cta' );
-get_template_part( 'template-parts/contact' );
 
 get_footer();
