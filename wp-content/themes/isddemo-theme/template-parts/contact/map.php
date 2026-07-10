@@ -10,32 +10,32 @@ if ( empty($offices) ) {
     // Fallback offices if ACF is empty
     $offices = [
         [
-            'name'    => 'NEW DELHI',
-            'address' => 'A-21, Second Floor, Okhla Phase 1,<br>New Delhi 110020',
-            'phone'   => '+91 98765 43210',
-            'email'   => 'delhi@indianshapedesigner.com',
-            'link'    => 'https://maps.google.com'
+            'name'    => 'ADMIN Office',
+            'address' => 'BH-16, IInd Floor, Krishna Appartment,<br>Shalimar Bagh (East), New Delhi 110088',
+            'phone'   => 'Phone: 011-27492016 | Mobile: 09891058527',
+            'email'   => 'info@interiordesignsandshapes.com',
+            'link'    => 'https://maps.google.com/?q=Shalimar+Bagh+East+New+Delhi'
         ],
         [
-            'name'    => 'Lucknow',
-            'address' => 'Gomti Nagar, Vibhuti Khand,<br>Lucknow 226010',
-            'phone'   => '+91 98765 43211',
-            'email'   => 'lucknow@indianshapedesigner.com',
-            'link'    => 'https://maps.google.com'
+            'name'    => 'LUCKNOW Office',
+            'address' => '18A/6, Ganeshpuri Colony, Near Medical<br>College, LUCKNOW - 226003',
+            'phone'   => '',
+            'email'   => 'luck@interiordesignsandshapes.com',
+            'link'    => 'https://maps.google.com/?q=Ganeshpuri+Colony+Lucknow'
         ],
         [
-            'name'    => 'Saharanpur',
-            'address' => 'Court Road, Civil Lines,<br>Saharanpur 247001',
-            'phone'   => '+91 98765 43212',
-            'email'   => 'saranpur@indianshapedesigner.com',
-            'link'    => 'https://maps.google.com'
+            'name'    => 'SAHARANPUR Office',
+            'address' => 'Civil Hospital Chowk, Mission Compound,<br>Saharanpur - 247001',
+            'phone'   => '',
+            'email'   => 'sre@interiordesignsandshapes.com',
+            'link'    => 'https://maps.google.com/?q=Civil+Hospital+Chowk+Saharanpur'
         ],
         [
             'name'    => 'USA Office',
-            'address' => '100 Park Avenue, 16th Floor,<br>New York, NY 10017',
-            'phone'   => '+1 212 555 0199',
-            'email'   => 'usa@indianshapedesigner.com',
-            'link'    => 'https://maps.google.com'
+            'address' => '25 Heitz PL., Hicksville, New York - 11801',
+            'phone'   => '',
+            'email'   => 'usa@interiordesignsandshapes.com',
+            'link'    => 'https://maps.google.com/?q=25+Heitz+Place+Hicksville+New+York'
         ]
     ];
 }
@@ -53,8 +53,10 @@ if ( empty($offices) ) {
                             <?php echo wp_kses_post($office['address']); ?>
                         </div>
                         <div class="isd-location-card__contact">
-                            <span class="isd-location-card__phone"><?php echo esc_html($office['phone']); ?></span>
-                            <span class="isd-location-card__email"><?php echo esc_html($office['email']); ?></span>
+                            <?php if ( !empty($office['phone']) ) : ?>
+                                <span class="isd-location-card__phone"><?php echo esc_html($office['phone']); ?></span>
+                            <?php endif; ?>
+                            <span class="isd-location-card__email">E-mail: <?php echo esc_html($office['email']); ?></span>
                         </div>
                     </div>
                     <div class="isd-location-card__link">
