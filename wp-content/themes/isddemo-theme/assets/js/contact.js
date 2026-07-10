@@ -111,7 +111,7 @@
         } );
 
         // Real-time error clearing
-        form.querySelectorAll( '.isd-float-input, .isd-float-select' ).forEach( function ( field ) {
+        form.querySelectorAll( '.isd-input-std, .isd-select-std, .isd-textarea-std' ).forEach( function ( field ) {
             field.addEventListener( 'input', function () {
                 this.classList.remove( 'isd-input-error' );
             } );
