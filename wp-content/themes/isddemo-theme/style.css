@@ -1,157 +1,33 @@
 /*
 Theme Name: Indian Shape Designer
-Theme URI: http://example.com/indian-shape-designer/
-Author: Antigravity
-Author URI: http://example.com/
-Description: A minimal, premium WordPress theme for Indian Shape Designer.
-Version: 1.0
+Theme URI: https://indianshapedesigner.com/
+Author: Indian Shape Designer
+Author URI: https://indianshapedesigner.com/
+Description: A premium, luxury, minimal WordPress theme for Indian Shape Designer - a high-end interior design company in Delhi NCR. Crafted with elegance and editorial aesthetics.
+Version: 2.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 8.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: isddemo-theme
+Tags: luxury, interior-design, minimal, premium, elegant, one-page
 */
 
-:root {
-  --color-purple: #6c2b8c;
-  --color-blue: #0071bc;
-  --color-orange: #f59521;
-  --color-brown: #5c3826;
-  --color-bg: #fdfdfd;
-  --color-text: #2b2b2b;
-  --color-text-light: #666666;
-  --color-white: #ffffff;
-  
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 4rem;
-  
-  --radius: 8px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: var(--color-purple);
-  margin-bottom: var(--spacing-md);
-}
-
-a {
-  color: var(--color-blue);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--color-orange);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-}
-
-/* Header */
-.site-header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-  padding: var(--spacing-md) 0;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-purple);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.site-logo img {
-  height: 50px;
-}
-
-.main-navigation ul {
-  list-style: none;
-  display: flex;
-  gap: var(--spacing-lg);
-}
-
-.main-navigation a {
-  color: var(--color-text);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-}
-
-.main-navigation a:hover {
-  color: var(--color-orange);
-}
-
-/* Button */
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: var(--color-purple);
-  color: var(--color-white);
-  border-radius: 50px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--color-orange);
-  color: var(--color-white);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(245, 149, 33, 0.3);
-}
-
-/* Footer */
-.site-footer {
-  background-color: var(--color-brown);
-  color: var(--color-white);
-  padding: var(--spacing-xl) 0 var(--spacing-lg);
-  margin-top: var(--spacing-xl);
-}
-
-.site-footer a {
-  color: #ddd;
-}
-
-.site-footer a:hover {
-  color: var(--color-orange);
-}
+/* ============================================
+   IMPORTS - Load all modular CSS files
+   ============================================ */
+@import url('assets/css/variables.css');
+@import url('assets/css/globals.css');
+@import url('assets/css/typography.css');
+@import url('assets/css/navbar.css');
+@import url('assets/css/hero.css');
+@import url('assets/css/stats.css');
+@import url('assets/css/about.css');
+@import url('assets/css/services.css');
+@import url('assets/css/projects.css');
+@import url('assets/css/process.css');
+@import url('assets/css/testimonials.css');
+@import url('assets/css/contact.css');
+@import url('assets/css/footer.css');
+@import url('assets/css/responsive.css');

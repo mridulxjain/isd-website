@@ -1,0 +1,100 @@
+/* ============================================
+   DESIGN PROCESS SECTION
+   Indian Shape Designer - Luxury Theme
+   ============================================ */
+
+.isd-process {
+    background-color: var(--color-bg);
+    overflow: hidden;
+}
+
+.isd-process__header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.isd-process__timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+/* Connecting line */
+.isd-process__timeline::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-accent), transparent);
+    z-index: 0;
+}
+
+.isd-process__step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: var(--z-base);
+}
+
+.isd-process__step-num {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-5);
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-semibold);
+    color: var(--color-accent);
+    transition: all var(--transition-base);
+    position: relative;
+    z-index: var(--z-above);
+}
+
+.isd-process__step:hover .isd-process__step-num {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-gold);
+}
+
+.isd-process__step-icon {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-4);
+    display: flex;
+    justify-content: center;
+}
+
+.isd-process__step-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 1.25;
+    transition: color var(--transition-base);
+}
+
+.isd-process__step:hover .isd-process__step-icon {
+    color: var(--color-accent);
+}
+
+.isd-process__step-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-3);
+}
+
+.isd-process__step-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-gray);
+    line-height: 1.7;
+    padding: 0 var(--space-2);
+}

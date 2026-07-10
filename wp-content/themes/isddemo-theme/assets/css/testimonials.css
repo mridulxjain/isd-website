@@ -1,0 +1,307 @@
+/* ============================================
+   TESTIMONIALS & BRANDS SECTION
+   Indian Shape Designer - Luxury Theme
+   ============================================ */
+
+.isd-testimonials {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.isd-testimonials__header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.isd-testimonials__title {
+    color: var(--color-white);
+}
+
+.isd-testimonials__track-outer {
+    overflow: hidden;
+}
+
+.isd-testimonials__track {
+    display: flex;
+    gap: var(--grid-gap);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.isd-testimonial-card {
+    flex: 0 0 calc(33.33% - 22px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-card);
+    padding: var(--card-padding);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.isd-testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.isd-testimonial-card__stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-5);
+}
+
+.isd-testimonial-card__star {
+    width: 16px;
+    height: 16px;
+    color: var(--color-accent);
+}
+
+.isd-testimonial-card__star svg {
+    width: 100%;
+    height: 100%;
+}
+
+.isd-testimonial-card__quote {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-regular);
+    color: var(--color-white);
+    line-height: 1.6;
+    margin-bottom: var(--space-6);
+    font-style: italic;
+}
+
+.isd-testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.isd-testimonial-card__photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-accent);
+}
+
+.isd-testimonial-card__name {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-white);
+    display: block;
+}
+
+.isd-testimonial-card__project {
+    font-size: var(--text-xs);
+    color: var(--color-text-gray);
+    letter-spacing: 0.08em;
+}
+
+/* Carousel controls */
+.isd-testimonials__controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: 50px;
+}
+
+.isd-testimonials__btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.isd-testimonials__btn:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.isd-testimonials__btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.5;
+}
+
+/* Brands / Partners */
+.isd-brands {
+    background-color: var(--color-white);
+    padding: 70px 0;
+}
+
+.isd-brands__header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.isd-brands__label {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+}
+
+.isd-brands__track-outer {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.isd-brands__track {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    animation: scrollBrands 25s linear infinite;
+    width: max-content;
+}
+
+.isd-brands__track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollBrands {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.isd-brands__logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.45);
+    transition: filter var(--transition-base);
+    flex-shrink: 0;
+}
+
+.isd-brands__logo:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* Blog Preview */
+.isd-blog {
+    background-color: var(--color-bg);
+}
+
+.isd-blog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.isd-blog__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+}
+
+.isd-blog-card {
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.isd-blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.isd-blog-card__img-wrapper {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.isd-blog-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+    display: block;
+}
+
+.isd-blog-card:hover .isd-blog-card__img {
+    transform: scale(1.05);
+}
+
+.isd-blog-card__content {
+    padding: var(--card-padding);
+}
+
+.isd-blog-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.isd-blog-card__category {
+    display: inline-block;
+    background-color: rgba(200, 164, 93, 0.1);
+    color: var(--color-accent);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+}
+
+.isd-blog-card__date {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+}
+
+.isd-blog-card__reading-time {
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    margin-left: auto;
+}
+
+.isd-blog-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--weight-medium);
+    color: var(--color-primary);
+    line-height: 1.35;
+    margin-bottom: var(--space-4);
+    transition: color var(--transition-fast);
+}
+
+.isd-blog-card:hover .isd-blog-card__title {
+    color: var(--color-accent);
+}
+
+.isd-blog-card__excerpt {
+    font-size: var(--text-sm);
+    color: var(--color-text-gray);
+    line-height: 1.75;
+    margin-bottom: var(--space-5);
+}
+
+.isd-blog-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: gap var(--transition-fast);
+}
+
+.isd-blog-card__link:hover {
+    gap: var(--space-3);
+}

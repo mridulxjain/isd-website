@@ -1,0 +1,102 @@
+/* ============================================
+   CSS DESIGN TOKENS / VARIABLES
+   Indian Shape Designer - Luxury Theme
+   ============================================ */
+
+:root {
+    /* ---- COLOR PALETTE ---- */
+    --color-primary:        #111111;
+    --color-secondary:      #1F1F1F;
+    --color-accent:         #C8A45D;
+    --color-accent-light:   #D4B472;
+    --color-accent-dark:    #A8843D;
+    --color-bg:             #FAF8F5;
+    --color-bg-dark:        #111111;
+    --color-bg-alt:         #F5F2ED;
+    --color-white:          #FFFFFF;
+    --color-black:          #000000;
+    --color-text:           #111111;
+    --color-text-gray:      #6E6E6E;
+    --color-text-light:     #9A9A9A;
+    --color-border:         #E8E4DE;
+    --color-border-dark:    #2A2A2A;
+    --color-overlay:        rgba(17, 17, 17, 0.62);
+
+    /* ---- TYPOGRAPHY ---- */
+    --font-heading:         'Playfair Display', Georgia, serif;
+    --font-body:            'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-alt:             'Cormorant Garamond', Georgia, serif;
+
+    /* ---- FONT SIZES ---- */
+    --text-xs:   0.75rem;    /* 12px */
+    --text-sm:   0.875rem;   /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg:   1.125rem;   /* 18px */
+    --text-xl:   1.25rem;    /* 20px */
+    --text-2xl:  1.5rem;     /* 24px */
+    --text-3xl:  1.875rem;   /* 30px */
+    --text-4xl:  2.25rem;    /* 36px */
+    --text-5xl:  3rem;       /* 48px */
+    --text-6xl:  3.75rem;    /* 60px */
+    --text-7xl:  4.5rem;     /* 72px */
+
+    /* ---- FONT WEIGHTS ---- */
+    --weight-light:      300;
+    --weight-regular:    400;
+    --weight-medium:     500;
+    --weight-semibold:   600;
+    --weight-bold:       700;
+
+    /* ---- SPACING SCALE ---- */
+    --space-1:    0.25rem;   /* 4px */
+    --space-2:    0.5rem;    /* 8px */
+    --space-3:    0.75rem;   /* 12px */
+    --space-4:    1rem;      /* 16px */
+    --space-5:    1.25rem;   /* 20px */
+    --space-6:    1.5rem;    /* 24px */
+    --space-8:    2rem;      /* 32px */
+    --space-10:   2.5rem;    /* 40px */
+    --space-12:   3rem;      /* 48px */
+    --space-16:   4rem;      /* 64px */
+    --space-20:   5rem;      /* 80px */
+    --space-24:   6rem;      /* 96px */
+    --space-32:   8rem;      /* 128px */
+
+    /* ---- SECTION SPACING ---- */
+    --section-padding-desktop: 140px;
+    --section-padding-tablet:  100px;
+    --section-padding-mobile:  70px;
+
+    /* ---- LAYOUT ---- */
+    --container-width:  1280px;
+    --container-padding: 2rem;
+    --grid-gap:         2rem;    /* 32px */
+    --card-padding:     2rem;    /* 32px */
+
+    /* ---- BORDER RADIUS ---- */
+    --radius-sm:   8px;
+    --radius-md:   12px;
+    --radius-card: 20px;
+    --radius-img:  24px;
+    --radius-pill: 999px;
+
+    /* ---- SHADOWS ---- */
+    --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-lg:   0 10px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+    --shadow-xl:   0 20px 60px rgba(0, 0, 0, 0.10), 0 8px 20px rgba(0, 0, 0, 0.06);
+    --shadow-gold: 0 8px 30px rgba(200, 164, 93, 0.25);
+
+    /* ---- TRANSITIONS ---- */
+    --transition-fast:   0.2s ease;
+    --transition-base:   0.4s ease;
+    --transition-slow:   0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* ---- Z-INDEX ---- */
+    --z-base:      1;
+    --z-above:     10;
+    --z-overlay:   50;
+    --z-modal:     100;
+    --z-navbar:    1000;
+}

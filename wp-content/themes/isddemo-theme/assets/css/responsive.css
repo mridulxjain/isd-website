@@ -1,0 +1,236 @@
+/* ============================================
+   RESPONSIVE STYLES (Mobile-First Breakpoints)
+   Indian Shape Designer - Luxury Theme
+   ============================================ */
+
+/* ---- TABLET: max 1024px ---- */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding-desktop: var(--section-padding-tablet);
+        --container-padding: 1.5rem;
+    }
+
+    /* Navbar */
+    .isd-navbar__nav,
+    .isd-navbar__cta {
+        display: none;
+    }
+
+    .isd-navbar__toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .isd-hero__card {
+        display: none;
+    }
+
+    /* Stats */
+    .isd-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .isd-stats__item:nth-child(2)::after {
+        display: none;
+    }
+
+    /* About */
+    .isd-about__grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .isd-about__image {
+        height: 450px;
+    }
+
+    /* Services */
+    .isd-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Why Choose */
+    .isd-why__grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .isd-why__image {
+        height: 400px;
+    }
+
+    /* Projects */
+    .isd-projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .isd-projects__grid .isd-project-card:first-child {
+        grid-column: span 2;
+    }
+
+    /* Process */
+    .isd-process__timeline {
+        flex-wrap: wrap;
+    }
+
+    .isd-process__step {
+        flex: 0 0 calc(33.33% - 16px);
+    }
+
+    .isd-process__timeline::before {
+        display: none;
+    }
+
+    /* Testimonials */
+    .isd-testimonial-card {
+        flex: 0 0 calc(50% - 16px);
+    }
+
+    /* Blog */
+    .isd-blog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .isd-blog__grid .isd-blog-card:last-child {
+        display: none;
+    }
+
+    /* Contact */
+    .isd-contact__grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    /* Footer */
+    .isd-footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+/* ---- MOBILE: max 768px ---- */
+@media (max-width: 768px) {
+    :root {
+        --section-padding-desktop: var(--section-padding-mobile);
+        --container-padding: 1.25rem;
+    }
+
+    /* Typography */
+    .isd-title--lg {
+        font-size: 2rem;
+    }
+
+    .isd-title--md {
+        font-size: 1.75rem;
+    }
+
+    /* Hero */
+    .isd-hero__title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .isd-hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .isd-btn {
+        width: 100%;
+    }
+
+    /* Stats */
+    .isd-stats {
+        margin-top: -30px;
+    }
+
+    .isd-stats__inner {
+        max-width: calc(100% - 32px);
+    }
+
+    .isd-stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+
+    .isd-stats__item::after {
+        display: none;
+    }
+
+    /* Services */
+    .isd-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Projects */
+    .isd-projects__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .isd-projects__grid .isd-project-card:first-child {
+        grid-column: span 1;
+    }
+
+    /* Process */
+    .isd-process__step {
+        flex: 0 0 calc(50% - 16px);
+    }
+
+    /* Testimonials */
+    .isd-testimonial-card {
+        flex: 0 0 calc(100% - 8px);
+    }
+
+    /* Blog */
+    .isd-blog__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .isd-blog__grid .isd-blog-card:last-child {
+        display: block;
+    }
+
+    .isd-blog__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    /* Footer */
+    .isd-footer__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .isd-footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Form */
+    .isd-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Filter tabs */
+    .isd-filter-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: var(--space-2);
+        flex-wrap: nowrap;
+    }
+
+    .isd-filter-tab {
+        flex-shrink: 0;
+    }
+}
+
+/* ---- SMALL MOBILE: max 480px ---- */
+@media (max-width: 480px) {
+    .isd-stats__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .isd-hero__subtitle {
+        font-size: var(--text-base);
+    }
+}
