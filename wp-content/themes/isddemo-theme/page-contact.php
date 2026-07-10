@@ -7,7 +7,6 @@
 get_header();
 
 get_template_part( 'template-parts/contact/hero' );
-get_template_part( 'template-parts/contact/quick-contact' );
 get_template_part( 'template-parts/contact/consultation-form' );
 get_template_part( 'template-parts/contact/map' );
 get_template_part( 'template-parts/contact/faq' );

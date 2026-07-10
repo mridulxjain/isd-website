@@ -25,43 +25,40 @@ $faqs = [
     ],
 ];
 ?>
-<section class="isd-faq isd-section" id="faq" aria-label="Frequently Asked Questions">
-    <div class="isd-container">
-        <div class="isd-faq__inner">
-            <div class="isd-faq__header">
-                <span class="isd-label isd-fade-up">FAQ</span>
-                <h2 class="isd-title isd-title--md isd-fade-up isd-delay-1">Common Questions</h2>
-                <p class="isd-body isd-fade-up isd-delay-2">Everything you need to know before booking your consultation.</p>
-            </div>
-            <div class="isd-faq__list" role="list">
-                <?php foreach ( $faqs as $i => $faq ) :
-                    $id = 'faq-' . ( $i + 1 );
-                    $panel_id = 'faq-panel-' . ( $i + 1 );
-                ?>
-                <div class="isd-faq__item isd-fade-up isd-delay-<?php echo esc_attr( $i + 1 ); ?>" role="listitem">
-                    <button
-                        class="isd-faq__trigger"
-                        id="<?php echo esc_attr( $id ); ?>"
-                        aria-expanded="false"
-                        aria-controls="<?php echo esc_attr( $panel_id ); ?>"
-                    >
-                        <span class="isd-faq__question"><?php echo esc_html( $faq['q'] ); ?></span>
-                        <span class="isd-faq__icon" aria-hidden="true">
-                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6l5 5 5-5"/></svg>
-                        </span>
-                    </button>
-                    <div
-                        class="isd-faq__panel"
-                        id="<?php echo esc_attr( $panel_id ); ?>"
-                        role="region"
-                        aria-labelledby="<?php echo esc_attr( $id ); ?>"
-                        hidden
-                    >
-                        <p class="isd-faq__answer"><?php echo esc_html( $faq['a'] ); ?></p>
-                    </div>
+<section class="isd-faq-minimal isd-section" id="faq" aria-label="Frequently Asked Questions">
+    <div class="isd-container" style="max-width: 900px;">
+        <div class="isd-faq-minimal__header">
+            <span class="isd-label isd-fade-up">FAQ</span>
+            <h2 class="isd-faq-minimal__heading isd-fade-up isd-delay-1">Common Questions</h2>
+        </div>
+        <div class="isd-faq-minimal__list" role="list">
+            <?php foreach ( $faqs as $i => $faq ) :
+                $id = 'faq-' . ( $i + 1 );
+                $panel_id = 'faq-panel-' . ( $i + 1 );
+            ?>
+            <div class="isd-faq-minimal__item isd-fade-up isd-delay-<?php echo esc_attr( $i + 1 ); ?>" role="listitem">
+                <button
+                    class="isd-faq-minimal__trigger"
+                    id="<?php echo esc_attr( $id ); ?>"
+                    aria-expanded="false"
+                    aria-controls="<?php echo esc_attr( $panel_id ); ?>"
+                >
+                    <span class="isd-faq-minimal__question"><?php echo esc_html( $faq['q'] ); ?></span>
+                    <span class="isd-faq-minimal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 5v14M5 12h14"/></svg>
+                    </span>
+                </button>
+                <div
+                    class="isd-faq-minimal__panel"
+                    id="<?php echo esc_attr( $panel_id ); ?>"
+                    role="region"
+                    aria-labelledby="<?php echo esc_attr( $id ); ?>"
+                    hidden
+                >
+                    <p class="isd-faq-minimal__answer"><?php echo esc_html( $faq['a'] ); ?></p>
                 </div>
-                <?php endforeach; ?>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

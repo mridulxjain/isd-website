@@ -39,28 +39,24 @@ $isd_locations = [
     ],
 ];
 ?>
-<div class="isd-office-cards">
+<div class="isd-locations-minimal">
     <?php foreach ( $isd_locations as $i => $loc ) : ?>
-    <div class="isd-office-card isd-fade-up isd-delay-<?php echo esc_attr( $i + 1 ); ?>">
-        <div class="isd-office-card__icon" aria-hidden="true">
-            <?php echo $loc['icon']; // phpcs:ignore ?>
-        </div>
-        <div class="isd-office-card__content">
-            <h3 class="isd-office-card__city"><?php echo esc_html( $loc['city'] ); ?></h3>
-            <p class="isd-office-card__address"><?php echo nl2br( esc_html( $loc['address'] ) ); ?></p>
-            <div class="isd-office-card__contacts">
+    <div class="isd-location-minimal isd-fade-up isd-delay-<?php echo esc_attr( $i + 1 ); ?>">
+        <h3 class="isd-location-minimal__city"><?php echo esc_html( $loc['city'] ); ?></h3>
+        <div class="isd-location-minimal__details">
+            <p class="isd-location-minimal__address"><?php echo nl2br( esc_html( $loc['address'] ) ); ?></p>
+            <div class="isd-location-minimal__contacts">
                 <?php if ( $loc['phone'] ) : ?>
-                <a href="tel:<?php echo esc_attr( preg_replace( '/\D/', '', $loc['phone'] ) ); ?>" class="isd-office-card__link">
+                <a href="tel:<?php echo esc_attr( preg_replace( '/\D/', '', $loc['phone'] ) ); ?>" class="isd-location-minimal__link">
                     <?php echo esc_html( $loc['phone'] ); ?>
                 </a>
                 <?php endif; ?>
-                <button class="isd-office-card__link isd-copy-email" data-email="<?php echo esc_attr( $loc['email'] ); ?>" aria-label="Copy email">
+                <button class="isd-location-minimal__link isd-copy-email" data-email="<?php echo esc_attr( $loc['email'] ); ?>" aria-label="Copy email">
                     <?php echo esc_html( $loc['email'] ); ?>
                 </button>
             </div>
-            <a href="<?php echo esc_url( $loc['maps'] ); ?>" class="isd-office-card__directions" target="_blank" rel="noopener noreferrer">
-                Directions
-                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+            <a href="<?php echo esc_url( $loc['maps'] ); ?>" class="isd-location-minimal__directions" target="_blank" rel="noopener noreferrer">
+                View Map <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M10 2v6M10 2H4"/></svg>
             </a>
         </div>
     </div>

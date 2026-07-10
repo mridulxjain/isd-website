@@ -13,6 +13,7 @@ require get_template_directory() . '/inc/menus.php';
 require get_template_directory() . '/inc/custom-post-types.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/acf.php';
+require get_template_directory() . '/inc/routing.php';
 
 // Disable default WooCommerce styles
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
