@@ -12,11 +12,11 @@
         </div>
         <div class="isd-before-after isd-scale-in" role="slider" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" style="position:relative;overflow:hidden;border-radius:var(--radius-img);height:500px;cursor:ew-resize;user-select:none;">
             <div class="isd-before-after__before" style="position:absolute;inset:0;">
-                <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=1200&q=80" alt="Before - Original space" style="width:100%;height:100%;object-fit:cover;display:block;">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/before-demo.png' ); ?>" alt="Before - Original space" style="width:100%;height:100%;object-fit:cover;display:block;">
                 <span style="position:absolute;top:20px;left:20px;background:rgba(0,0,0,0.6);color:#fff;padding:6px 14px;border-radius:999px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Before</span>
             </div>
-            <div class="isd-before-after__after" style="position:absolute;inset:0;width:50%;overflow:hidden;">
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="After - Transformed by Indian Shape Designer" style="width:100%;height:100%;object-fit:cover;display:block;min-width:200%;">
+            <div class="isd-before-after__after" style="position:absolute;inset:0; clip-path: inset(0 50% 0 0);">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/after-demo.png' ); ?>" alt="After - Transformed space" style="width:100%;height:100%;object-fit:cover;display:block;">
                 <span style="position:absolute;top:20px;right:20px;background:var(--color-accent);color:#fff;padding:6px 14px;border-radius:999px;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">After</span>
             </div>
             <div class="isd-before-after__handle" style="position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:3px;background:white;cursor:ew-resize;z-index:10;display:flex;align-items:center;justify-content:center;">

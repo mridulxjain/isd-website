@@ -20,7 +20,7 @@
         }
 
         function setPosition(pct) {
-            afterPane.style.width = pct + '%';
+            afterPane.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
             handle.style.left = pct + '%';
         }
 
