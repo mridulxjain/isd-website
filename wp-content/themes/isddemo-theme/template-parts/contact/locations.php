@@ -56,7 +56,7 @@ $isd_locations = [
                 </button>
             </div>
             <a href="<?php echo esc_url( $loc['maps'] ); ?>" class="isd-location-minimal__directions" target="_blank" rel="noopener noreferrer">
-                View Map <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M10 2v6M10 2H4"/></svg>
+                View Map
             </a>
         </div>
     </div>
