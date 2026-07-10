@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Part: Compact Mega Menu
+ * Template Part: Compact Services Dropdown
  */
 $categories = [
     [
@@ -25,7 +25,7 @@ $categories = [
         'id'    => 'exterior',
         'title' => 'Exterior',
         'icon'  => '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>',
-        'items' => ['Front Elevation', 'Landscape', 'Boundary Wall', 'Garden', 'Facade']
+        'items' => ['Front Elevation', 'Landscape', 'Boundary Wall', 'Garden', 'Facade Design']
     ],
     [
         'id'    => 'security',
@@ -35,7 +35,7 @@ $categories = [
     ]
 ];
 ?>
-<div class="isd-mega" id="isd-mega-menu" role="menu" hidden>
+<div class="isd-mega" id="isd-services-dropdown" role="menu">
     <div class="isd-mega__inner">
         
         <!-- Left: Categories -->
@@ -51,11 +51,6 @@ $categories = [
         <div class="isd-mega__content">
             <?php foreach ( $categories as $index => $cat ) : ?>
                 <div class="isd-mega__panel <?php echo $index === 0 ? 'is-active' : ''; ?>" id="mega-panel-<?php echo esc_attr($cat['id']); ?>" role="tabpanel" tabindex="0" <?php echo $index !== 0 ? 'hidden' : ''; ?>>
-                    
-                    <div class="isd-mega__panel-header">
-                        <span class="isd-mega__panel-title"><?php echo esc_html($cat['title']); ?> Services</span>
-                        <a href="<?php echo esc_url(home_url('/services/' . $cat['id'])); ?>" class="isd-mega__panel-link">View All <svg viewBox="0 0 12 12" fill="none" stroke="currentColor"><path d="M3 6h6M7 4l2 2-2 2"/></svg></a>
-                    </div>
                     
                     <div class="isd-mega__grid">
                         <?php foreach ( $cat['items'] as $item ) : ?>
@@ -74,5 +69,12 @@ $categories = [
             <?php endforeach; ?>
         </div>
 
+    </div>
+    
+    <div class="isd-mega__footer">
+        <a href="<?php echo esc_url(home_url('/services')); ?>" class="isd-mega__footer-link">
+            View All Services
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
     </div>
 </div>

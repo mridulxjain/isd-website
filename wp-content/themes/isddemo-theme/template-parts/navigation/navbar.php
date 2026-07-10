@@ -5,24 +5,20 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
-
-// Check if we are on a page that should start with a transparent navbar
-// (e.g., Homepage with a dark hero, or Portfolio page)
-$is_transparent_start = is_front_page() || get_query_var('isd_portfolio') ? 'isd-nav--transparent-start' : '';
 ?>
 <!-- Overlay for mobile drawer -->
 <div class="isd-nav-overlay" id="isd-nav-overlay" aria-hidden="true"></div>
 
-<header class="isd-nav <?php echo esc_attr($is_transparent_start); ?>" id="isd-global-nav" role="banner">
+<header class="isd-nav" id="isd-global-nav" role="banner">
     <div class="isd-nav__container">
         
         <!-- Left: Logo -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="isd-nav__logo" aria-label="<?php bloginfo( 'name' ); ?> – Home">
-            <!-- SVG Logo (Dark by default, switches to white if transparent start) -->
+            <!-- SVG Logo (Always Dark) -->
             <svg class="isd-nav__logo-mark" width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-                <rect width="36" height="36" rx="8" fill="currentColor" class="isd-nav__logo-bg"/>
-                <path d="M8 28V12l10-8 10 8v16" stroke="currentColor" class="isd-nav__logo-path" stroke-width="1.8" fill="none"/>
-                <path d="M14 28v-8h8v8" stroke="currentColor" class="isd-nav__logo-path" stroke-width="1.8" fill="none"/>
+                <rect width="36" height="36" rx="8" fill="#111111"/>
+                <path d="M8 28V12l10-8 10 8v16" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+                <path d="M14 28v-8h8v8" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
             </svg>
             <span class="isd-nav__logo-text">Indian Shape<br><em>Designer</em></span>
         </a>
@@ -43,7 +39,7 @@ $is_transparent_start = is_front_page() || get_query_var('isd_portfolio') ? 'isd
                         Our Services
                         <svg class="isd-nav__chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>
                     </button>
-                    <?php get_template_part( 'template-parts/navigation/mega-menu' ); ?>
+                    <?php get_template_part( 'template-parts/navigation/services-dropdown' ); ?>
                 </li>
 
                 <li class="isd-nav__item">
