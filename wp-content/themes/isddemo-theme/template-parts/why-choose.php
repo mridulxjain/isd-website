@@ -19,7 +19,7 @@ $features = [
             </div>
             <div>
                 <span class="isd-label isd-fade-up">Why Choose Us</span>
-                <h2 class="isd-title isd-title--md isd-fade-up isd-delay-1" style="margin-bottom:10px;">The Interior Shape Design Difference</h2>
+                <h2 class="isd-title isd-title--md isd-fade-up isd-delay-1" style="margin-bottom:10px;">The Interior Shapes Design Difference</h2>
                 <div class="isd-why__features">
                     <?php foreach ( $features as $i => $f ) : ?>
                     <div class="isd-why-feature isd-fade-up isd-delay-<?php echo esc_attr( ( $i % 3 ) + 2 ); ?>">
