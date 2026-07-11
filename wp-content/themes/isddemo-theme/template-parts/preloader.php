@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             <path d="M8 28V12l10-8 10 8v16" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
             <path d="M14 28v-8h8v8" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
         </svg>
-        <span class="isd-preloader__text">Interior Shapes<br><em>and Design</em></span>
+        <span class="isd-preloader__text">Interior Shapes<br><em>and Designs</em></span>
     </div>
 </div>
 

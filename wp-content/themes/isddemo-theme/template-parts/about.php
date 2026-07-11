@@ -5,7 +5,7 @@
  */
 $intro_label   = function_exists('get_field') ? get_field('hp_about_label')   : 'About Us';
 $intro_heading = function_exists('get_field') ? get_field('hp_about_heading') : "A Studio Built on Craft,\nDriven by Design.";
-$intro_text    = function_exists('get_field') ? get_field('hp_about_text')    : 'Interior Shapes and Design is a New Delhi-based design studio creating luxury interiors, exteriors and turnkey spaces for discerning clients across India and internationally.';
+$intro_text    = function_exists('get_field') ? get_field('hp_about_text')    : 'Interior Shapes and Designs is a New Delhi-based design studio creating luxury interiors, exteriors and turnkey spaces for discerning clients across India and internationally.';
 $intro_image   = function_exists('get_field') ? get_field('hp_about_image')   : null;
 ?>
 <section class="isd-hp-about isd-section" aria-label="About the Studio">
