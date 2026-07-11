@@ -25,5 +25,5 @@ add_action( 'wp_head', function() {
 
 // Override Site Title
 add_filter( 'option_blogname', function() {
-    return 'Interior Shapes Design';
+    return 'Interior Shapes and Design';
 } );

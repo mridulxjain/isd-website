@@ -16,7 +16,7 @@ $reasons = [
         <div class="isd-ab-why__header">
             <span class="isd-label isd-fade-up">Why Us</span>
             <h2 class="isd-ab-why__heading isd-fade-up isd-delay-1">Why Clients Trust Us</h2>
-            <p class="isd-ab-why__intro isd-fade-up isd-delay-2">Six things that set every Interior Shapes Design project apart.</p>
+            <p class="isd-ab-why__intro isd-fade-up isd-delay-2">Six things that set every Interior Shapes and Design project apart.</p>
         </div>
         <div class="isd-ab-why__grid">
             <?php foreach ( $reasons as $i => $r ) : ?>
