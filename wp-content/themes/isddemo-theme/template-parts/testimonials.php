@@ -3,7 +3,7 @@
  * Template Part: Testimonials
  */
 $testimonials = [
-    [ 'quote' => '"Indian Shape Designer completely transformed our 3BHK into a luxury masterpiece. Every detail was thoughtfully curated — we couldn\'t be happier!"', 'name' => 'Priya Sharma', 'project' => 'Residential, South Delhi', 'photo' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80' ],
+    [ 'quote' => '"Interior Shape Design completely transformed our 3BHK into a luxury masterpiece. Every detail was thoughtfully curated — we couldn\'t be happier!"', 'name' => 'Priya Sharma', 'project' => 'Residential, South Delhi', 'photo' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80' ],
     [ 'quote' => '"Our office space went from mundane to magnificent. The team was professional, on-time, and delivered beyond expectations. Highly recommend!"', 'name' => 'Rahul Mehta', 'project' => 'Commercial, Gurgaon', 'photo' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80' ],
     [ 'quote' => '"The modular kitchen they designed is the heart of our home now. Stunning aesthetics, premium quality, and flawless execution. Worth every rupee!"', 'name' => 'Ananya Kapoor', 'project' => 'Kitchen, Noida', 'photo' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80' ],
 ];
