@@ -58,7 +58,7 @@ $categories = [
             
             <div class="isd-mega__grid">
                 <?php foreach ( $categories as $cat ) : ?>
-                <a href="<?php echo esc_url(home_url('/services/' . $cat['id'])); ?>" class="isd-mega__card">
+                <a href="javascript:void(0);" class="isd-mega__card">
                     <div class="isd-mega__card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><?php echo $cat['icon']; ?></svg>
                     </div>

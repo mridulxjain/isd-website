@@ -57,7 +57,7 @@ $categories = [
                             <ul class="isd-drawer__sublist">
                                 <?php foreach ( $cat['items'] as $item ) : ?>
                                 <li>
-                                    <a href="<?php echo esc_url(home_url('/services/' . $cat['id'] . '/' . sanitize_title($item))); ?>">
+                                    <a href="javascript:void(0);">
                                         <?php echo esc_html($item); ?>
                                     </a>
                                 </li>
